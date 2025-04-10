@@ -5,27 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bingo</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="flex">
 
-<div class="header">
-    <a class="logo">Työpaikka Bingo</a>
-
-    <div class="header-center">
-    <a class="active" href="Play">Play</a>
-    </div>
-
-    <div class="profile">
-            <img src="img/Icon.png" alt="Icon" class="dropdown-icon">
-        <div class="dropdown-content">
-            <a href="profile">Profile</a>
-            <a href="settings">Settings</a>
-            <a href="logout">Logout</a>
+    <div class="header">
+        <div class="header-left">
+          <a class="logo" href="#">Työpaikka Bingo</a>
         </div>
-    </div>
-</div>
+      
+        <div class="header-center">
+            <div class="dropdown play-dropdown">
+              <a href="#" class="active dropdown-toggle">Play</a>
+              <div class="dropdown-content">
+                <a href="local">Play Local</a>
+                <a href="online">Play Online</a>
+                <a href="instructions">How to Play</a>
+              </div>
+            </div>
+          </div>
+      
+        <div class="header-right">
+          <div class="dropdown">
+            <img src="img/Icon.png" class="dropdown-icon" alt="Icon">
+                <div class="dropdown-content">
+                    <a href="profile">Profile</a>
+                    <a href="settings">Settings</a>
+                    <a href="logout">Logout</a>
+                </div>
+          </div>
+        </div>
+      </div>
+
     
     <div class="wrap">
         <div class="bingo-menu-container">
@@ -43,6 +57,18 @@
             </div>
         </div>    
     </div>
+
+    <footer>
+
+    <div class="footer-container">
+      <div class="social-icons">
+        <h1>3 gatos</h1>
+        <a href="https://github.com/Piljoliina"><i class="fa-brands fa-github"></i></a>
+        <a href="https://github.com/Ellaporo"><i class="fa-brands fa-github"></i></a>
+        <a href="https://github.com/SamppleZZ"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
 
 
     <script src="script.js"></script>
