@@ -23,7 +23,7 @@
               <div class="dropdown-content">
                 <a href="local">Play Local</a>
                 <a href="online">Play Online</a>
-                <a href="instructions">How to Play</a>
+                <a href="#" onclick="openPopup(); return false;">How to Play</a>
               </div>
             </div>
           </div>
@@ -34,7 +34,7 @@
                 <div class="dropdown-content">
                     <a href="profile">Profile</a>
                     <a href="settings">Settings</a>
-                    <a href="logout">Logout</a>
+                    <a href="login">Login</a>
                 </div>
           </div>
         </div>
@@ -71,7 +71,32 @@
   </footer>
 
 
-    <script src="script.js"></script>
+    <div id="instructionPopup" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <img src="img/HowToPlay.png" alt="Instructions" class="popup-img">
+      </div>
+    </div>
+
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeLogin">&times;</span>
+        <h2>Login</h2>
+        <form>
+          <label for="username">Username:</label><br>
+          <input type="text" id="username" name="username"><br><br>
+    
+          <label for="password">Password:</label><br>
+          <input type="password" id="password" name="password"><br><br>
+    
+          <button type="submit">Login</button>
+          <button type="button" id="createAccount" class="create-account-btn">
+            Create an Account
+          </button>
+        </form>
+      </div>
+
+      <script src="script.js"></script>
 
 </body>
 </html>
