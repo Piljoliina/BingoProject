@@ -82,17 +82,20 @@
       <div class="modal-content">
         <span class="close" id="closeLogin">&times;</span>
         <h2>Login</h2>
-        <form>
+        <form action="login.php" method="post">
           <label for="username">Username:</label><br>
           <input type="text" id="username" name="username"><br><br>
-    
+        
           <label for="password">Password:</label><br>
           <input type="password" id="password" name="password"><br><br>
-    
+        
           <button type="submit">Login</button>
-          <button type="button" id="createAccount" class="create-account-btn">
-            Create an Account
-          </button>
+        </form>
+        
+        <form action="register.php" method="post">
+          <input type="text" name="username" placeholder="New username"><br><br>
+          <input type="password" name="password" placeholder="New password"><br><br>
+          <button type="submit">Create Account</button>
         </form>
       </div>
 
