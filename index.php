@@ -41,22 +41,27 @@
       </div>
 
     
-    <div class="wrap">
-        <div class="bingo-menu-container">
-            <div class="bingo-head">
-                <h1 class="bingo-title">A Pörrsikurssi</h1>
-            </div>
-        
-            <div class="menu-body">
-                    <h2 class="box-title">With A Lorem Ipsum </h2>
-            </div>
+<div class="wrap">
+    <div class="bingo-menu-container">
+        <div class="bingo-head">
+            <h1 class="bingo-title">A Pörrsikurssi</h1>
+        </div>
 
-            <div class="introduction">
-                <h3 class="introduction-text">
-                    Työpaikka bingo is a new interactive way to enjoy those boring oddlong online work meetings</h3>
-            </div>
-        </div>    
+        <div class="menu-body">
+            <h2 class="box-title">With A Lorem Ipsum </h2>
+        </div>
+
+        <div class="introduction">
+            <h3 class="introduction-text">
+                Työpaikka bingo is a new interactive way to enjoy those boring oddlong online work meetings
+            </h3>
+        </div>
+
+        <div class="user-count">
+            <?php include 'users.php'; ?>
+        </div>
     </div>
+</div>
 
     <footer>
 
