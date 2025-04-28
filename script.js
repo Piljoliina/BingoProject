@@ -36,10 +36,25 @@
     document.getElementById("instructionPopup").style.display = "none";
   }
 
+  function openLocalPopup() {
+    document.getElementById("LocalPlayPopup").style.display = "block";
+  }
+  
+  function closeLocalPopup() {
+    document.getElementById("LocalPlayPopup").style.display = "none";
+  }
+  
+  // Correct window click
   window.onclick = function(event) {
-    const popup = document.getElementById("instructionPopup");
-    if (event.target === popup) {
-      popup.style.display = "none";
+    const instructionPopup = document.getElementById("instructionPopup");
+    const LocalPlayPopup = document.getElementById("LocalPlayPopup");
+    
+    if (event.target === instructionPopup) {
+      instructionPopup.style.display = "none";
+    }
+    
+    if (event.target === LocalPlayPopup) {
+      LocalPlayPopup.style.display = "none";
     }
   };
 
@@ -50,17 +65,12 @@
   
   document.getElementById('closeLogin').addEventListener('click', function() {
     document.getElementById('loginModal').style.display = 'none';
-  });
-  
-  window.addEventListener('click', function(e) {
-    const modal = document.getElementById('loginModal');
-    if (e.target === modal) {
-      modal.style.display = 'none';
-    }
-  });
+  }); 
 
-  document.getElementById('createAccount').addEventListener('click', function () {
-    alert("Redirecting to registration page...");
-  });   
+ // document.getElementById('createAccount').addEventListener('click', function () {
+  //  alert("Redirecting to registration page...");
+ // });
+
+  
 
   //END OF POPUP'S

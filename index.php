@@ -21,7 +21,7 @@
             <div class="dropdown play-dropdown">
               <a href="#" class="active dropdown-toggle">Play</a>
               <div class="dropdown-content">
-                <a href="local">Play Local</a>
+              <a href="#" onclick="openLocalPopup(); return false;">Local Play</a>
                 <a href="online">Play Online</a>
                 <a href="#" onclick="openPopup(); return false;">How to Play</a>
               </div>
@@ -49,7 +49,7 @@
 
         <div class="menu-body">
             <h2 class="box-title">With A Lorem Ipsum </h2>
-        </div>
+        </div>  
 
         <div class="introduction">
             <h3 class="introduction-text">
@@ -83,6 +83,13 @@
       </div>
     </div>
 
+    <div id="LocalPlayPopup" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closeLocalPopup()">&times;</span>
+        <img src="img/HowToPlay.png" alt="Instructions" class="popup-img">
+      </div>
+    </div>
+
     <div id="loginModal" class="modal">
       <div class="modal-content">
         <span class="close" id="closeLogin">&times;</span>
@@ -103,6 +110,7 @@
           <button type="submit">Create Account</button>
         </form>
       </div>
+  </div>
 
       <script src="script.js"></script>
 
