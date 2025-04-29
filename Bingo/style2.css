@@ -1,0 +1,243 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+body {
+    min-height: 110vh;
+    color: var(--dark-color);
+    background-color: var(--background-color);
+}
+
+:root {
+    --light-cyan-color: #00FFFF;
+    --light-color: #fff;
+    --dark-color: #000;
+    --grey-color: #f2f2f2;
+    --transition: all 300ms ease-in-out;
+    --background-color: #FFFDD0;
+    --green-color: #5CE65C;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
+.profile img {
+    width: 40px;
+    height: auto; 
+    object-fit: contain; 
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-icon {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--light-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    min-width: 160px;
+    z-index: 999;
+}
+
+.dropdown-content a {
+    color: var(--dark-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--grey-color);
+}
+
+.dropdown.show .dropdown-content {
+    display: block;
+}
+
+/* Popup */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    min-width: 300px;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    transition: var(--transition);
+}
+
+.close-button:hover {
+    color: var(--green-color);
+}
+
+/* Image styling for the "How to Play" popup */
+.popup-content img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px; /* Add space between the title and the image */
+}
+
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--grey-color);
+    padding: 20px;
+    border-radius: 1.5rem;
+    position: relative;
+    z-index: 999;
+  }
+  
+.header-left, .header-center, .header-right {
+    display: flex;
+    align-items: center;
+  }
+  
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--dark-color);
+    text-decoration: none;
+  }
+  
+.header-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+.header a.active {
+    background-color: var(--green-color);
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    padding: 10px 30px
+  }
+
+/* Wrap box*/
+.wrap {
+    margin: 20px auto 0 auto;
+    display: block;
+    margin-top: 20px;
+    background-color: var(--light-color);
+    padding: 1.5rem 4rem 3rem 4rem;
+    width: 1200px;
+    height: 1120px;
+    border-radius: 1.5rem;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(255, 0, 0, 0.1), 0 1px 3px rgb(0 0 0 / 10%);
+    z-index: 1;
+}
+
+.bingo-title {
+    text-align: center;
+    font-size: 2rem;
+    padding: 10px;
+}
+
+.box-title {
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+.introduction-text {
+    text-align: left;
+    padding-top: 300px;
+}
+
+/* End of wrap */
+
+/* Footer */
+
+footer {
+    margin: 10px;
+    background-color: var(--grey-color);
+    border-radius: 3.5rem;
+}
+
+.footer-container {
+    width: 100%;
+    padding: 100px 30px 30px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: var(--green-color);
+    margin: 10px;
+    border-radius: 60%;
+}
+
+.social-icons a i{
+    font-size: 2em;
+    color: var(--dark-color);
+    opacity: 0.8;
+}
+
+.social-icons a:hover{
+    background-color: var(--dark-color);
+    transition: 0.5s;
+}
+
+.social-icons a:hover i{
+    color: var(--light-color);
+    transition: 0.5s;
+}
+
+.social-icons h1{
+    position: absolute;
+    bottom: 10px;
+}
+
+/* End of footer */

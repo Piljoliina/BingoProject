@@ -14,44 +14,45 @@
     --background-color: #FFFDD0;
     --green-color: #5CE65C;
 }
+
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--grey-color);
-    padding: 20px;
-    border-radius: 1.5rem;
-    position: relative;
-    z-index: 999;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--grey-color);
+  padding: 20px;
+  border-radius: 1.5rem;
+  position: relative;
+  z-index: 999;
+}
+
 .header-left, .header-center, .header-right {
-    display: flex;
-    align-items: center;
-  }
-  
+  display: flex;
+  align-items: center;
+}
+
 .logo {
-    font-size: 25px;
-    font-weight: bold;
-    color: var(--dark-color);
-    text-decoration: none;
-  }
-  
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--dark-color);
+  text-decoration: none;
+}
+
 .header-center {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .header a.active {
-    background-color: var(--green-color);
-    color: white;
-    padding: 12px;
-    border-radius: 8px;
-    text-decoration: none;
-    padding: 10px 30px
-  }
-  
+  background-color: var(--green-color);
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  padding: 10px 30px
+}
+
 .dropdown {
     position: relative;
   }
