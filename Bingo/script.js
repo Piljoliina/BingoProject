@@ -81,3 +81,11 @@ document.addEventListener('DOMContentLoaded', function () {
      });
    }
  });
+
+ startGameBtn.addEventListener('click', () => {
+  const selectedOption = gameOptions.value;
+  console.log("Starting game with:", selectedOption);
+
+  
+  window.location.href = 'testing2.html';
+});
