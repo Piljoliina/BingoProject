@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 "If the argument turns heated",
 "If someone uses a derogatory term",
 "If the topic of migration is brought up more than 3 times",
-"If 3 different presidents/leaders are mentioned",
+"If 3 different presidents or leaders are mentioned",
 "Asia",
 "Africa",
 "The middle-east",
