@@ -25,7 +25,11 @@ popup.addEventListener('click', (e) => {
 
 // Enable/Disable "Start Game" button based on game selection
 gameOptions.addEventListener('change', () => {
-  startGameBtn.disabled = gameOptions.value === "";
+  const selectedOption = gameOptions.value;
+  startGameBtn.disabled = selectedOption === "";
+  
+  // Save the selected option in localStorage
+  localStorage.setItem("selectedTheme", selectedOption);
 });
 
 // Start the game
