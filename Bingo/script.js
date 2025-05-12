@@ -5,6 +5,38 @@ const startGameBtn = document.getElementById('startGameBtn');
 const gameOptions = document.getElementById('gameOptions');
 const closePopup = document.getElementById('closePopup');
 
+// Settings Popup
+const settingsIcon = document.querySelector('.settings-icon');
+const settingsPopup = document.getElementById('settingsPopup');
+const closeSettingsPopup = document.getElementById('closeSettingsPopup');
+
+// Volume Slider
+const volumeSlider = document.getElementById('volumeSlider');
+const volumeValue = document.getElementById('volumeValue');
+
+volumeSlider.addEventListener('input', () => {
+  volumeValue.textContent = volumeSlider.value;
+});
+
+// Show the settings popup
+settingsIcon.addEventListener('click', (e) => {
+  e.preventDefault();
+  settingsPopup.style.display = 'flex';
+});
+
+// Close the settings popup
+closeSettingsPopup.addEventListener('click', () => {
+  settingsPopup.style.display = 'none';
+});
+
+// Close settings popup if clicking outside the content
+settingsPopup.addEventListener('click', (e) => {
+  if (e.target === settingsPopup) {
+    settingsPopup.style.display = 'none';
+  }
+});
+
+
 // Show the Local Play popup
 localPlay.addEventListener('click', (e) => {
   e.preventDefault();

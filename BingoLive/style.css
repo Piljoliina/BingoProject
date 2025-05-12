@@ -53,11 +53,23 @@
   padding: 10px 30px
 }
 
+/* Settings */
+.settings {
+    position: relative;
+  }
+
+.settings-icon {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
 .dropdown {
     position: relative;
   }
   
-.dropdown-icon {
+.settings-icon {
     width: 40px;
     height: auto;
     cursor: pointer;

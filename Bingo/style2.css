@@ -34,16 +34,31 @@ body {
     object-fit: contain; 
 }
 
-/* Dropdown */
-.dropdown {
-    position: relative;
-}
-
-.dropdown-icon {
+/* settings */
+.settings-icon {
     width: 40px;
     height: auto;
     cursor: pointer;
     border-radius: 50%;
+}
+
+.popup-title {
+  margin-bottom: 1rem;
+}
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#volumeSlider {
+  width: 200px;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
 }
 
 .dropdown-content {
