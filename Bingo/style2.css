@@ -42,6 +42,13 @@ body {
     border-radius: 50%;
 }
 
+.profile-icon {
+    width: 20px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
 .popup-title {
   margin-bottom: 1rem;
 }

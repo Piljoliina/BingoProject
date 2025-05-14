@@ -28,14 +28,17 @@
       
         <div class="header-right">
           <div class="settings">
-            
-            <img src="img/Icon.png" class="settings-icon" alt="Icon">
-            <div class="Settings-toggle">
-
+            <i class="fa-solid fa-gear settings-icon" alt="Icon"></i>
+              <div class="dropdown settings-dropdown">
+                <img src="img/Icon.png" class="profile-icon dropdown-toggle" alt="Icon">
+                  <div class="dropdown-content">
+                    <a href="#" id="openSettings">Settings</a>
+                    <a href="#" id="howToPlayLinkDuplicate">How to Play</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
       <div class="wrap">
         <div class="bingo-menu-container">
@@ -51,6 +54,12 @@
                 <h3 class="introduction-text">
                     Työpaikka bingo is a new interactive way to enjoy those boring oddlong online work meetings
                 </h3>
+
+                
+            <div class="user-count">
+              <?php include 'users.php'; ?>
+            </div>
+
             </div>
         </div>
     </div>
