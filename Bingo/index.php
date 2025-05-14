@@ -106,7 +106,7 @@
 
   <!-- Settings Popup -->
   <div id="settingsPopup" class="popup" style="display: none;">
-    <div class="popup-content">
+    <div class="popup-content" class="icon-container">
       <button id="closeSettingsPopup" class="close-button">&times;</button>
       <h2 class="popup-title">Main Volume</h2>
       <div class="volume-control">

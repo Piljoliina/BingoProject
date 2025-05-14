@@ -35,6 +35,13 @@ body {
 }
 
 /* settings */
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between icons */
+}
+
 .settings-icon {
     width: 40px;
     height: auto;
@@ -43,7 +50,7 @@ body {
 }
 
 .profile-icon {
-    width: 20px;
+    width: 30px;
     height: auto;
     cursor: pointer;
     border-radius: 50%;
