@@ -15,21 +15,25 @@ document.addEventListener("DOMContentLoaded", () => {
             "Stage", "Conference", "Workshop", "Seminar"
         ],
         kokous: [
-            "Meeting", "Agenda", "Minutes", "Conference call", "Presentations", "Action points", "Feedback", 
-            "Project updates", "Time management", "Meeting room", "Coffee break", "Team collaboration", 
-            "Deadlines", "Brainstorming", "Decision making", "Follow-up", "Emails", "Task assignment",
-            "Teamwork", "Participants", "Summarize", "Proposals", "Discussions", "Objectives", "Networking"
+            "Staff",
+            "Email","assignment","Forgets They're muted","Forgets to mute themselfs","long Oookaayy","Reaction with any emoji","Lunch break","Someone goes to the bathroom","5min smoke break","Sorry, could you repeat that?"  ,"Silence for atleast 15 seconds"  ,"The word What? is said 5 times"  ,"Someone's dog barks 7 times"  ,
+            "During the call people cough atleast 20 times"  ,"Any questions?","Vacation","2 people start talking with no correlation to the Project"  ,
+            "Gimme a sec","Someone's child walks in the room"  ,"Any ideas?","Are you sure?","The Project","Someone puts a Gif in the chat",
+            "Someone disconnects accidentally","Someone's wifi stops working","Why is it not working?","Slideshow isn't working","Technical difficulties","Call needs to be restarted","Someone oversleeps","atleast 3 people don't show up",
+            "Someones webcam doesn't work","The call needs to be postponed","Someone has very bad internet","someone is in a hurry","How's everyone doing?","How long will this call last?","Any comments?","Talking about weather","Good job","Atleast 5 people join late","If someones name is said 10 times","Does anyone know how to X?","I need help with XX","For some reason","If atleast 3 slideshows presented","Atleast 3 people say Be right back","If the Meet lasts less than an hour","If someone has trouble sharing their screen"
         ],
         koulu: [
-            "Classroom", "Teacher", "Student", "Homework", "Exam", "Grades", "Assignment", "Learning", 
-            "Textbook", "Blackboard", "Quiz", "Presentation", "Library", "Lecture", "Subjects", "Recess",
-            "Timetable", "Subjective", "Peer review", "Group project", "Homework deadlines", "Notes", "Cramming"
+            "can I go to the bathroom?", "can I borrow a pencil?", "did you do your homework?", "dog ate my homework", "I forgot to do my homework", "can I copy your homework?", "can I copy your notes?", "what did you get for X?", "how did you get the answer?", "I'm going to fail",
+            "when is the break?", "what's for lunch", "I wish it was weekend", "I wish it was Friday", "This is so boring", "I forgot my book", "does anyone know the answer?", "When does the class end?", "yelling in the hallway", "someone falls from a chair",
+            "someone is caught playing", "teacher gets a call", "teacher forgets something", "silence after teacher asks a question", "hysteric laughter", "someone falls asleep in class", "someone opens a can", "someone opens a bottle", "someones phone rings during class", "teacher yawns",
+            "someone arrives late", "someone drops a pencil", "Someone draws on their desk", "Someone knocks on the door", "Someone forgets their books", "Someone gets into an argument with the teacher", "Teacher forgot something", "People yawn at least 5 times", "At least 2 people sneeze", "Something is thrown",
+            "Someone skips class", "An exam is announced", "Teacher leaves the classroom", "Someone complains about the temperature", "Teacher can't stick to the topic", "People talk about the weather", "Network problems", "Someone breaks their pencil", "At least 3 people go to the bathroom", "Two people go to the bathroom at the same time"
         ],
         diat: [
-            "Slides", "PowerPoint", "Visuals", "Charts", "Graphs", "Design", "Font", "Text", "Headers", 
-            "Colors", "Transitions", "Animation", "Background", "Images", "Presentation style", "Handouts", 
-            "Projector", "Discussion", "Timetable", "Software", "Design tips", "Presentation tools", 
-            "Screen", "Projector", "Keynote"
+            "Funny Picture in the Slideshow", "As you can see", "huge emoji somewhere in the slideshow", "slideshow is written in comic sans", "slideshow gets interrupted by an animal", "Screenshare randomly shuts off", "person presenting goes to the bathroom",
+            "slideshow has atleast 9 slides", "call bursts into a bunch of laughter", "more than 4 people made the slideshow", "Where did my mouse/cursor go?", "slideshow lasts longer than 2 hours", "silence that lasts longer than 10 seconds", "slideshow has more than 15 attendants",
+            "Any questions?", "Next slide", "I know what your thinking/Wondering", "Gimme a sec", "1 slide has only 1 Word in it", "people presenting wonder into a different topic", "That comes later in the show",
+            "1 slide is Missing", "presentators sneeze atleast 4 times", "People start laughing because of an image", "when asked about having any questions no one has any", "presentators skip a slide"
         ],
         tyokaverit: [
             "Co-workers", "Teamwork", "Collaboration", "Feedback", "Team spirit", "Communication", "Meetings", 
