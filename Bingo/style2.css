@@ -71,10 +71,11 @@ body {
 }
 
 /* Dropdown */
-.play-button{
+.play-button {
     width: 200px;
     height: 200px;
     position: relative;
+    cursor: pointer;
 }
 
 .dropdown {
@@ -209,10 +210,11 @@ body {
     z-index: 1;
 }
 
-.center-image{
-    position: absolute;
-    display: flex;
-    align-items: center;
+.wrapper-img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
 }
 
 .bingo-title {

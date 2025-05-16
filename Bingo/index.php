@@ -67,6 +67,12 @@
               <?php include 'users.php'; ?>
             </div>
 
+            <br>
+            
+            <div class="wrapper-img">
+            <img src="img/lain.jpg" alt="lain">
+            </div>
+
             </div>
         </div>
     </div>
