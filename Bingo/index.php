@@ -10,14 +10,21 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+
+<div class="loader-wrapper">
+  <div class="loader">
+    <div class="loader-inner"></div>
+  </div>
+</div>
+
     <div class="header">
         <div class="header-left">
-          <a class="logo" href="#">Työpaikka Bingo</a>
+          <img src="img/Illustration14.png" class="logo" href="#">
         </div>
       
         <div class="header-center">
           <div class="dropdown play-dropdown">
-            <a href="#" class="active dropdown-toggle">Play</a>
+            <img src="img/Illustration17.png"#" class="play-button active dropdown-toggle">
             <div class="dropdown-content">
               <a href="#" id="localPlay">Local Play</a>
               <a href="#" id="howToPlayLink">How to Play</a> <!-- Added link to How to Play -->
@@ -30,7 +37,7 @@
           <div class="settings">
             <i class="fa-solid fa-gear settings-icon" alt="Icon"></i>
               <div class="dropdown settings-dropdown">
-                <img src="img/Icon.png" class="profile-icon dropdown-toggle" alt="Icon">
+                <img src="img/Illustration16.png" class="profile-icon dropdown-toggle" alt="Icon">
                   <div class="dropdown-content">
                     <a href="#" id="openSettings">Settings</a>
                     <a href="#" id="howToPlayLinkDuplicate">How to Play</a>

@@ -125,3 +125,21 @@ document.addEventListener('DOMContentLoaded', function () {
   
   window.location.href = 'testing2.html';
 });
+
+// loader
+
+
+  window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader-wrapper");
+
+    if (loader) {
+      setTimeout(() => {
+        loader.style.transition = "opacity 0.5s ease";
+        loader.style.opacity = "0";
+
+        setTimeout(() => {
+          loader.style.display = "none";
+        }, 500); // Wait for the fade-out to finish
+      }, 2000); // Show loader for 2 seconds
+    }
+  });
