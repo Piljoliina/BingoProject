@@ -22,14 +22,14 @@
           <img src="img/Illustration14.png" class="logo" href="#">
         </div>
       
-        <div class="header-center">
-          <div class="dropdown play-dropdown">
-            <img src="img/Illustration17.png"#" class="play-button active dropdown-toggle">
-            <div class="dropdown-content">
-              <a href="#" id="localPlay">Local Play</a>
-              <a href="#" id="howToPlayLink">How to Play</a> <!-- Added link to How to Play -->
-              <a href="#">Play Online</a>
-            </div>
+        <div class="dropdown play-dropdown ">
+          <div class="wwrapper play-button active dropdown-toggle">
+            <img src="img/Illustration17.png" alt="play">
+          </div>
+          <div class="dropdown-content">
+            <a href="#" id="localPlay">Local Play</a>
+            <a href="#" id="howToPlayLink">How to Play</a>
+            <a href="#">Play Online</a>
           </div>
         </div>
       
