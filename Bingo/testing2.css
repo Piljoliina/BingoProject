@@ -16,24 +16,35 @@ body {
 .cell {
     width: 150px;
     height: 150px;
-    border: 2px solid #444;
+    border: 1px solid #ddd;
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 22px;
-    background-color: white;
+    background-color: #f9fdfd;
     cursor: pointer;
-    transition: background-color 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.25s ease;
+}
+
+.cell:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: #e0f7f5;
 }
 
 .cell.clicked {
-    background-color: #f88;
+    background-color: #ffd1d1;
+    color: #900;
+    font-weight: bold;
 }
 
 .cell.win {
     background-color: #4caf50;
     color: white;
     font-weight: bold;
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.5);
 }
 
 .nuoli {
