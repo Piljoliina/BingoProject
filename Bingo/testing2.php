@@ -12,7 +12,7 @@ session_start();
     <script src="testing2.js" defer></script>
 </head>
 <body>
-    <a href="index.php">
+    <a class="wwrapper" href="index.php">
         <img class="nuoli" src="nuoli.png" height="55px" width="100px">
     </a>
     <h1>4x4 Bingo</h1>
