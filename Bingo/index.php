@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,8 +43,9 @@
               <div class="dropdown settings-dropdown">
                 <img src="img/Illustration16.png" class="profile-icon dropdown-toggle" alt="Icon">
                   <div class="dropdown-content">
-                    <a href="#" id="openSettings">Settings</a>
+                    <a href="login">Login</a>
                     <a href="#" id="howToPlayLinkDuplicate">How to Play</a>
+                    <a href="#" id="statisticsLink">Statistics</a>
                   </div>
                 </div>
               </div>
@@ -104,10 +109,39 @@
             <option value="politiikka">Politiikka</option>
           </select>
           <br><br>
-          <button href="testing2.html" id="startGameBtn" disabled>Start Game</button>
+          <button href="testing2.php" id="startGameBtn" disabled>Start Game</button>
         </div>
       </div>
 
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeLogin">&times;</span>
+
+    <?php if (isset($_SESSION['username'])): ?>
+      <h2>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h2>
+      <a href="logout.php" class="logout-btn">Logout</a>
+
+    <?php else: ?>
+      <h2>Login</h2>
+      <form action="login.php" method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+
+        <button type="submit">Login</button>
+      </form>
+
+      <br>
+      <form action="register.php" method="post">
+        <input type="text" name="username" placeholder="New username"><br><br>
+        <input type="password" name="password" placeholder="New password"><br><br>
+        <button type="submit">Create Account</button>
+      </form>
+    <?php endif; ?>
+  </div>
+</div>
       <!-- How to Play Popup -->
       <div id="howToPlayPopup" class="popup" style="display: none;">
         <div class="popup-content">
@@ -128,6 +162,28 @@
       </div>
     </div>
   </div>
+
+  <!-- Statistics Popup -->
+<div id="statisticsPopup" class="popup" style="display: none;">
+  <div class="popup-content">
+    <button id="closeStatisticsPopup" class="close-button">&times;</button>
+    <h2>Statistics</h2>
+<?php
+if (isset($_SESSION['username'])) {
+    $conn = new mysqli("localhost", "root", "", "bingo_app");
+    $stmt = $conn->prepare("SELECT bingos FROM users WHERE username = ?");
+    $stmt->bind_param("s", $_SESSION['username']);
+    $stmt->execute();
+    $stmt->bind_result($bingos);
+    $stmt->fetch();
+    $stmt->close();
+    $conn->close();
+
+    echo "<p><strong>Bingoes Achieved:</strong> $bingos</p>";
+}
+?>
+  </div>
+</div>
 
     <script src="script.js"></script>
 </body>

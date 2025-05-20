@@ -105,7 +105,16 @@ document.addEventListener("DOMContentLoaded", () => {
                     const selector = `.cell[data-row="${r}"][data-col="${c}"]`;
                     document.querySelector(selector).classList.add("win");
                 });
-                setTimeout(() => alert("BINGO!"), 100);
+                            fetch("increment_bingo.php")
+                .then(response => response.text())
+                .then(msg => {
+                    console.log(msg);
+                    alert("BINGO!");
+                })
+                .catch(err => {
+                    console.error("Error incrementing bingo:", err);
+                    alert("BINGO! (Could not update stats)");
+                });
             }
         });
 

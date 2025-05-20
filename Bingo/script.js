@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
   console.log("Starting game with:", selectedOption);
 
   
-  window.location.href = 'testing2.html';
+  window.location.href = 'testing2.php';
 });
 
 // loader
@@ -143,3 +143,32 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 2000); // Show loader for 2 seconds
     }
   });
+
+    document.querySelector('a[href="login"]').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('loginModal').style.display = 'flex';
+  });
+  
+  document.getElementById('closeLogin').addEventListener('click', function() {
+    document.getElementById('loginModal').style.display = 'none';
+  }); 
+
+  // Statistics Popup
+const statisticsLink = document.getElementById('statisticsLink');
+const statisticsPopup = document.getElementById('statisticsPopup');
+const closeStatisticsPopup = document.getElementById('closeStatisticsPopup');
+
+statisticsLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  statisticsPopup.style.display = 'flex';
+});
+
+closeStatisticsPopup.addEventListener('click', () => {
+  statisticsPopup.style.display = 'none';
+});
+
+statisticsPopup.addEventListener('click', (e) => {
+  if (e.target === statisticsPopup) {
+    statisticsPopup.style.display = 'none';
+  }
+});
