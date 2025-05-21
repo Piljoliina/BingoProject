@@ -44,7 +44,7 @@ session_start();
                 <img src="img/Illustration16.png" class="profile-icon dropdown-toggle" alt="Icon">
                   <div class="dropdown-content">
                     <a href="login">Login</a>
-                    <a href="#" id="howToPlayLinkDuplicate">How to Play</a>
+                    <a href="leaderboard.php" id="howToPlayLinkDuplicate">How to Play</a>
                     <a href="#" id="statisticsLink">Statistics</a>
                   </div>
                 </div>

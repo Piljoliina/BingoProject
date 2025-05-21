@@ -172,3 +172,4 @@ statisticsPopup.addEventListener('click', (e) => {
     statisticsPopup.style.display = 'none';
   }
 });
+
