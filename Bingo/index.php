@@ -43,8 +43,10 @@ session_start();
               <div class="dropdown settings-dropdown">
                 <img src="img/Illustration16.png" class="profile-icon dropdown-toggle" alt="Icon">
                   <div class="dropdown-content">
-                    <a href="login">Login</a>
-                    <a href="leaderboard.php" id="howToPlayLinkDuplicate">How to Play</a>
+                    <a href="login">
+                      <?php echo isset($_SESSION['username']) ? 'Logout' : 'Login'; ?>
+                    </a>
+                    <a href="leaderboard.php" id="leaderboard">Leaderboard</a>
                     <a href="#" id="statisticsLink">Statistics</a>
                   </div>
                 </div>

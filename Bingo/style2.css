@@ -418,3 +418,94 @@ footer {
   font-size: 24px;
   cursor: pointer;
 }
+
+.logout-btn {
+  display: block;
+  margin: 20px auto 0 auto; 
+  background-color: var(--green-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.logout-btn:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.leaderboard-container {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 30px;
+    background-color: var(--light-color);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+ 
+/* Leaderboard Title */
+.leaderboard-title {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    margin-bottom: 30px;
+}
+ 
+/* Leaderboard Table */
+.leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    overflow: hidden;
+}
+ 
+/* Table Header */
+.leaderboard-table thead {
+    background-color: var(--green-color);
+    color: var(--light-color);
+    text-transform: uppercase;
+}
+ 
+/* Table Header and Cell Styling */
+.leaderboard-table th,
+.leaderboard-table td {
+    padding: 15px 20px;
+    text-align: center;
+}
+ 
+/* Zebra Striping */
+.leaderboard-table tr:nth-child(even) {
+    background-color: var(--grey-color);
+}
+ 
+/* Row Hover Effect */
+.leaderboard-table tr:hover {
+    background-color: #d0ffd0;
+}
+ 
+/* Rank Cell Styling */
+.leaderboard-table td:first-child {
+    font-weight: bold;
+    color: #1c7c1c;
+}
+ 
+/* Back Link Button */
+.leaderboard-back-link {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 10px 25px;
+    background-color: var(--green-color);
+    color: var(--light-color);
+    text-decoration: none;
+    border-radius: 12px;
+    transition: var(--transition);
+}
+ 
+.leaderboard-back-link:hover {
+    background-color: #47b847;
+}
