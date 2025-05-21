@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!selectedTheme || !themes[selectedTheme]) {
         alert("No theme selected or invalid theme. Returning to main menu.");
-        window.location.href = "index.html";
+        window.location.href = "index.php";
         return;
     }
 
@@ -99,23 +99,25 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelectorAll(".cell").forEach(c => c.classList.remove("win"));
             const winLine = checkWin(clicked);
 
-            if (winLine) {
-                console.log("Win detected:", winLine);
-                winLine.forEach(([r, c]) => {
-                    const selector = `.cell[data-row="${r}"][data-col="${c}"]`;
-                    document.querySelector(selector).classList.add("win");
-                });
-                            fetch("increment_bingo.php")
-                .then(response => response.text())
-                .then(msg => {
-                    console.log(msg);
-                    alert("BINGO!");
-                })
-                .catch(err => {
-                    console.error("Error incrementing bingo:", err);
-                    alert("BINGO! (Could not update stats)");
-                });
-            }
+                if (winLine) {
+                    winLine.forEach(([r, c]) => {
+                        const selector = `.cell[data-row="${r}"][data-col="${c}"]`;
+                        document.querySelector(selector).classList.add("win");
+                    });
+
+                    // Call the PHP script to update the database
+                    fetch('increment_bingo.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    })
+                    .then(response => response.text())
+                    .then(data => console.log(data))
+                    .catch(error => console.error('Error updating bingo:', error));
+
+                    setTimeout(() => alert("BINGO!"), 100);
+                }
         });
 
         grid.appendChild(cell);

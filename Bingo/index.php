@@ -86,7 +86,6 @@ session_start();
 
       <div class="footer-container">
         <div class="social-icons">
-          <h1>3 gatos</h1>
           <a href="https://github.com/Piljoliina"><i class="fa-brands fa-github"></i></a>
           <a href="https://github.com/Ellaporo"><i class="fa-brands fa-github"></i></a>
           <a href="https://github.com/SamppleZZ"><i class="fa-brands fa-github"></i></a>
