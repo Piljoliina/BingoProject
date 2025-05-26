@@ -27,9 +27,9 @@ session_start();
         </div>
       
         <div class="dropdown play-dropdown ">
-          <div class="wwrapper play-button active dropdown-toggle">
-            <img src="img/Illustration17.png" alt="play">
-          </div>
+            <div class="wwrapper play-button active dropdown-toggle">
+              <img src="img/Illustration17.png" alt="play">
+            </div>
           <div class="dropdown-content">
             <a href="#" id="localPlay">Local Play</a>
             <a href="#" id="howToPlayLink">How to Play</a>
@@ -87,7 +87,7 @@ session_start();
       <footer>
         <div class="footer-container">
           <div class="footer-icons-wrapper">
-            <p class="footer-label">Example</p>
+            <p class="footer-label">Contributors</p>
             <div class="social-icons">
               <a href="https://github.com/Piljoliina"><i class="fa-brands fa-github"></i></a>
               <a href="https://github.com/Ellaporo"><i class="fa-brands fa-github"></i></a>

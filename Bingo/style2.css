@@ -70,18 +70,11 @@ body {
   width: 200px;
 }
 
-/* Dropdown */
-.play-button {
-    width: 200px;
-    height: 200px;
-    position: relative;
-    cursor: pointer;
-}
-
 .wwrapper {
   position: absolute;
   top: -50px; 
   left: 50%;
+  right: 50%;
   transform: translateX(-50%);
   width: 250px;
   height: 120px;
@@ -95,7 +88,7 @@ body {
 }
 
 .wwrapper img {
-  width: 400px;
+  width: 300px;
   height: auto;
   pointer-events: none;
   padding-top: 20px;
@@ -196,7 +189,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: var(--grey-color);
-    padding: 2px;
+    padding: 0 20px;
     border-radius: 1.5rem;
     position: relative;
     z-index: 999;
@@ -280,7 +273,19 @@ footer {
 
 .footer-container {
     width: 100%;
-    padding: 100px 30px 30px;
+}
+
+.footer-icons-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-label {
+  padding: 0;
+  padding: 0;
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--dark-color)
 }
 
  /*GIthub Iconit*/
