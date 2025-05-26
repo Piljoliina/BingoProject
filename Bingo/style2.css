@@ -34,12 +34,12 @@ body {
     object-fit: contain; 
 }
 
-/* settings */
+/* Icons */
 
 .icon-container {
     display: flex;
     align-items: center;
-    gap: 10px; /* space between icons */
+    gap: 10px; 
 }
 
 .settings-icon {
@@ -80,7 +80,7 @@ body {
 
 .wwrapper {
   position: absolute;
-  top: -50px; /* distance from top */
+  top: -50px; 
   left: 50%;
   transform: translateX(-50%);
   width: 250px;
@@ -109,6 +109,8 @@ body {
   padding-top: 20px; /* adjust spacing as needed */
   min-height: 100vh;
 }
+
+/*dropdowns*/
 
 .dropdown {
     position: relative;
@@ -180,11 +182,11 @@ body {
     color: var(--green-color);
 }
 
-/* Image styling for the "How to Play" popup */
+/* how to play*/
 .popup-content img {
     max-width: 100%;
     height: auto;
-    margin-top: 15px; /* Add space between the title and the image */
+    margin-top: 15px;
 }
 
 
@@ -266,7 +268,7 @@ body {
     padding-top: 300px;
 }
 
-/* End of wrap */
+/* Wrapp loppuu */
 
 /* Footer */
 
@@ -280,6 +282,8 @@ footer {
     width: 100%;
     padding: 100px 30px 30px;
 }
+
+ /*GIthub Iconit*/
 
 .social-icons {
     display: flex;
@@ -315,9 +319,8 @@ footer {
     bottom: 10px;
 }
 
-/* End of footer */
 
-/* loader */
+/* Latausruutu */
 
 .loader-wrapper {
   position: fixed;
@@ -348,7 +351,7 @@ footer {
 }
 
 
-/* modal login */
+/* login */
 .modal {
   display: none;
   position: fixed;
@@ -398,6 +401,8 @@ footer {
   background-color: #4ec74e;
 }
 
+/*Accountin luonti*/
+
 .create-account-btn {
   margin-top: 10px;
   background-color: transparent;
@@ -435,8 +440,10 @@ footer {
 }
 
 .logout-btn:hover {
-  background-color: #218838; /* Darker green on hover */
+  background-color: #218838; 
 }
+
+/*Leaderboard*/
 
 .leaderboard-container {
     max-width: 900px;
@@ -448,14 +455,13 @@ footer {
     text-align: center;
 }
  
-/* Leaderboard Title */
+
 .leaderboard-title {
     font-size: 2.5rem;
     color: var(--dark-color);
     margin-bottom: 30px;
 }
  
-/* Leaderboard Table */
 .leaderboard-table {
     width: 100%;
     border-collapse: collapse;
@@ -464,37 +470,31 @@ footer {
     overflow: hidden;
 }
  
-/* Table Header */
 .leaderboard-table thead {
     background-color: var(--green-color);
     color: var(--light-color);
     text-transform: uppercase;
 }
  
-/* Table Header and Cell Styling */
 .leaderboard-table th,
 .leaderboard-table td {
     padding: 15px 20px;
     text-align: center;
 }
  
-/* Zebra Striping */
 .leaderboard-table tr:nth-child(even) {
     background-color: var(--grey-color);
 }
  
-/* Row Hover Effect */
 .leaderboard-table tr:hover {
     background-color: #d0ffd0;
 }
  
-/* Rank Cell Styling */
 .leaderboard-table td:first-child {
     font-weight: bold;
     color: #1c7c1c;
 }
  
-/* Back Link Button */
 .leaderboard-back-link {
     display: inline-block;
     margin-top: 40px;
