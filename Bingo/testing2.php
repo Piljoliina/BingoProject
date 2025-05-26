@@ -13,10 +13,20 @@ session_start();
 </head>
 <body>
     <a class="wwrapper" href="index.php">
-        <img class="nuoli" src="nuoli.png" height="55px" width="100px">
+        <img class="nuoli" src="img/nuoli1.png">
     </a>
-    <h1>4x4 Bingo</h1>
+
+    <div class="logo-container">
+        <img src="img/Illustration14.png" alt="Logo" width="150px">
+    </div>
+
+<div class="bingo-wrapper">
     <p id="click-counter">Clicked: 0</p>
-    <div id="bingo-grid" class="grid"></div>
+    <div class="bingo-container">
+        <div id="bingo-grid" class="grid"></div>
+    </div>
+</div>
+
+</body>
 </body>
 </html>

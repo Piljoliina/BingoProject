@@ -10,13 +10,30 @@ const settingsIcon = document.querySelector('.settings-icon');
 const settingsPopup = document.getElementById('settingsPopup');
 const closeSettingsPopup = document.getElementById('closeSettingsPopup');
 
-// Volume Slider
 const volumeSlider = document.getElementById('volumeSlider');
 const volumeValue = document.getElementById('volumeValue');
 
-volumeSlider.addEventListener('input', () => {
-  volumeValue.textContent = volumeSlider.value;
-});
+  // Convert and apply volume to all media elements
+  function setGlobalVolume(volumePercent) {
+    const volume = volumePercent / 100; // convert 0–100 to 0.0–1.0
+    document.querySelectorAll('audio, video').forEach(media => {
+      media.volume = volume;
+    });
+  }
+
+  // Update on input
+  volumeSlider.addEventListener('input', () => {
+    const value = parseInt(volumeSlider.value, 10);
+    volumeValue.textContent = value;
+    setGlobalVolume(value);
+  });
+
+  // Apply volume on page load
+  window.addEventListener('DOMContentLoaded', () => {
+    const initialValue = parseInt(volumeSlider.value, 10);
+    volumeValue.textContent = initialValue;
+    setGlobalVolume(initialValue);
+  });
 
 // Show the settings popup
 settingsIcon.addEventListener('click', (e) => {

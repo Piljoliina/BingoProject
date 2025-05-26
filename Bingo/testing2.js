@@ -1,12 +1,16 @@
+//Tää scripti toimii jesarilla ja ainoa jokaa tietää miksi se toimii on jeesus.
+
+
 document.addEventListener("DOMContentLoaded", () => {
-    const size = 4; // Bingo grid size (4x4)
+    const size = 4; // 4x4
     const totalCells = size * size;
     const grid = document.getElementById("bingo-grid");
     const clicked = Array.from({ length: size }, () => Array(size).fill(false));
     let clickCount = 0;
     const counterDisplay = document.getElementById("click-counter");
+    let bingoAchieved = false;
 
-    // Word sets for each theme
+    // Sanoja
     const themes = {
         esitykset: [
             "Presentation", "Audience", "Speech", "PowerPoint", "Slide", "Pitch", "Handout", "Notes",
@@ -58,9 +62,10 @@ document.addEventListener("DOMContentLoaded", () => {
         ]
     };
 
-    // Get selected theme from localStorage
+
+    // Valitse teema
     const selectedTheme = localStorage.getItem("selectedTheme");
-    console.log("Selected theme:", selectedTheme);  // For debugging
+    console.log("Selected theme:", selectedTheme);  // Debug kaks miljoonaa
 
     if (!selectedTheme || !themes[selectedTheme]) {
         alert("No theme selected or invalid theme. Returning to main menu.");
@@ -68,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    // Get the words for the selected theme
+    // Hae sanat
     const themeWords = themes[selectedTheme];
 
     if (themeWords.length < totalCells) {
@@ -90,6 +95,8 @@ document.addEventListener("DOMContentLoaded", () => {
         cell.dataset.col = col;
 
         cell.addEventListener("click", function () {
+            if (bingoAchieved) return; // Estä bingon toimiminen
+
             clicked[row][col] = !clicked[row][col];
             this.classList.toggle("clicked");
 
@@ -99,31 +106,33 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelectorAll(".cell").forEach(c => c.classList.remove("win"));
             const winLine = checkWin(clicked);
 
-                if (winLine) {
-                    winLine.forEach(([r, c]) => {
-                        const selector = `.cell[data-row="${r}"][data-col="${c}"]`;
-                        document.querySelector(selector).classList.add("win");
-                    });
+            if (winLine && !bingoAchieved) {
+                bingoAchieved = true; // Lukkoon peli
 
-                    // Call the PHP script to update the database
-                    fetch('increment_bingo.php', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        }
-                    })
-                    .then(response => response.text())
-                    .then(data => console.log(data))
-                    .catch(error => console.error('Error updating bingo:', error));
+                winLine.forEach(([r, c]) => {
+                    const selector = `.cell[data-row="${r}"][data-col="${c}"]`;
+                    document.querySelector(selector).classList.add("win");
+                });
 
-                    setTimeout(() => alert("BINGO!"), 100);
-                }
+                // PHP läpä läpä luu. +1 databaseen score
+                fetch('increment_bingo.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => response.text())
+                .then(data => console.log(data))
+                .catch(error => console.error('Error updating bingo:', error));
+
+                setTimeout(() => alert("BINGO!"), 100);
+            }
         });
 
         grid.appendChild(cell);
     });
 
-    // Check if the user won
+    // Voititko? wtf does this even mean.
     function checkWin(grid) {
         for (let i = 0; i < size; i++) {
             if (grid[i].every(v => v)) return Array.from({ length: size }, (_, j) => [i, j]);
@@ -136,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return null;
     }
 
-    // Shuffle the array to randomize the grid
+    // Randomizer
     function shuffle(arr) {
         for (let i = arr.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));

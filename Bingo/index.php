@@ -84,17 +84,18 @@ session_start();
         </div>
     </div>
 
-    <footer>
-
-      <div class="footer-container">
-        <div class="social-icons">
-          <a href="https://github.com/Piljoliina"><i class="fa-brands fa-github"></i></a>
-          <a href="https://github.com/Ellaporo"><i class="fa-brands fa-github"></i></a>
-          <a href="https://github.com/SamppleZZ"><i class="fa-brands fa-github"></i></a>
+      <footer>
+        <div class="footer-container">
+          <div class="footer-icons-wrapper">
+            <p class="footer-label">Example</p>
+            <div class="social-icons">
+              <a href="https://github.com/Piljoliina"><i class="fa-brands fa-github"></i></a>
+              <a href="https://github.com/Ellaporo"><i class="fa-brands fa-github"></i></a>
+              <a href="https://github.com/SamppleZZ"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
         </div>
-      </div>
-      
-    </footer>
+      </footer>
       
       <!-- Local Play Popup -->
       <div id="popup" class="popup" style="display: none;">
@@ -148,7 +149,7 @@ session_start();
         <div class="popup-content">
           <button id="closeHowToPlayPopup" class="close-button">&times;</button>
           <h2>How to Play</h2>
-          <img src="img/HowToPlay.png" alt="How to Play" style="max-width: 100%; height: auto;"/>
+          <img src="img/tutorialbingo.png" alt="How to Play" style="max-width: 100%; height: auto;"/>
         </div>
       </div>
 
