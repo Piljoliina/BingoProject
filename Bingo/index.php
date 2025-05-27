@@ -21,39 +21,47 @@ session_start();
   </div>
 </div>
 
-    <div class="header">
-        <div class="header-left">
-          <img src="img/Illustration14.png" class="logo" href="#">
-        </div>
-      
-        <div class="dropdown play-dropdown ">
-            <div class="wwrapper play-button active dropdown-toggle">
-              <img src="img/Illustration17.png" alt="play">
-            </div>
-          <div class="dropdown-content">
-            <a href="#" id="localPlay">Local Play</a>
-            <a href="#" id="howToPlayLink">How to Play</a>
-            <a href="#">Play Online</a>
+<audio id="bgAudio" autoplay loop>
+  <source src="music/Sneaky-Snitch.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="click-sound" preload="auto" src="sounds/pop.mp3"></audio>
+
+            <div class="header">
+          <!-- Logo -->
+          <div class="header-left">
+            <a href="#"><img src="img/Illustration14.png" class="logo" alt="Logo"></a>
           </div>
-        </div>
-      
-        <div class="header-right">
-          <div class="settings">
-            <i class="fa-solid fa-gear settings-icon" alt="Icon"></i>
-              <div class="dropdown settings-dropdown">
-                <img src="img/Illustration16.png" class="profile-icon dropdown-toggle" alt="Icon">
-                  <div class="dropdown-content">
-                    <a href="login">
-                      <?php echo isset($_SESSION['username']) ? 'Logout' : 'Login'; ?>
-                    </a>
-                    <a href="leaderboard.php" id="leaderboard">Leaderboard</a>
-                    <a href="#" id="statisticsLink">Statistics</a>
-                  </div>
-                </div>
+
+          <!-- Play Button -->
+          <div class="header-center">
+            <div class="dropdown play-dropdown">
+              <div class="play-button dropdown-toggle">
+                <img src="img/Illustration17.png" alt="Play">
+              </div>
+              <div class="dropdown-content">
+                <a href="#" id="localPlay">Local Play</a>
+                <a href="#" id="howToPlayLink">How to Play</a>
               </div>
             </div>
           </div>
 
+          <!-- Settings and Profile -->
+          <div class="header-right">
+            <i class="fa-solid fa-gear settings-icon"></i>
+            <div class="dropdown settings-dropdown">
+              <img src="img/Illustration16.png" class="profile-icon dropdown-toggle" alt="Profile">
+              <div class="dropdown-content">
+                <a href="login">
+                  <?php echo isset($_SESSION['username']) ? 'Logout' : 'Login'; ?>
+                </a>
+                <a href="leaderboard.php" id="leaderboard">Leaderboard</a>
+                <a href="#" id="statisticsLink">Statistics</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
       <div class="wrap">
         <div class="bingo-menu-container">
             <div class="bingo-head">

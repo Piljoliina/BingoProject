@@ -190,3 +190,28 @@ statisticsPopup.addEventListener('click', (e) => {
   }
 });
 
+//audio on click
+window.addEventListener('DOMContentLoaded', function () {
+  const audio = document.getElementById('bgAudio');
+
+  const playAudio = () => {
+    audio.play().catch(e => {
+      console.log('Autoplay blocked:', e);
+    });
+    window.removeEventListener('click', playAudio);
+  };
+
+  // Start on first click anywhere
+  window.addEventListener('click', playAudio);
+});
+
+//sounds
+    const playBtn = document.querySelector('.play-button');
+    const clickSound = document.getElementById('click-sound');
+ 
+    playBtn.addEventListener('click', () => {
+      clickSound.currentTime = 0;      // rewind if it’s still playing
+      clickSound.play().catch(err => {
+        console.warn('Sound play failed:', err);
+      });
+    });
