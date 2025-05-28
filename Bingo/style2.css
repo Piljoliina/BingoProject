@@ -1,4 +1,4 @@
-/* Base Reset and Fonts */
+/* Base */
 * {
   padding: 0;
   margin: 0;
@@ -50,6 +50,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+/* End of Header css*/
 
 /* Logo */
 .logo {
@@ -84,6 +85,7 @@ body {
   max-height: 100%;
   object-fit: contain;
 }
+/* End of Play Button css*/
 
 /* Dropdowns */
 .dropdown {
@@ -116,8 +118,9 @@ body {
 .dropdown.show .dropdown-content {
   display: block;
 }
+/* End of Dropdowns css*/
 
-/* Settings Icon */
+/* Settings and profile Icon */
 
 .settings-icon,
 .profile-icon {
@@ -171,7 +174,7 @@ body {
   margin: 0 auto;
 }
 
-/* Popup Base */
+/* Popup */
 .popup {
   position: fixed;
   top: 0;
@@ -215,6 +218,7 @@ body {
   color: #333;
   transition: var(--transition);
 }
+/* End of Popup css*/
 
 .close-button:hover {
   color: var(--green-color);
@@ -230,6 +234,7 @@ body {
 #volumeSlider {
   width: 200px;
 }
+/* End of Footer css*/
 
 /* Footer */
 footer {
@@ -279,6 +284,7 @@ footer {
 .social-icons a:hover i {
   color: var(--light-color);
 }
+/* End of footer css*/
 
 /* Loader */
 .loader-wrapper {
@@ -307,6 +313,7 @@ footer {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+/* End of Loader css*/
 
 /* Login Modal */
 .modal {
@@ -355,8 +362,9 @@ footer {
 .modal-content button:hover {
   background-color: #4ec74e;
 }
+/* End of modal css*/
 
-/* Logout */
+/* Logout css */
 .logout-btn {
   display: block;
   margin: 20px auto 0 auto;
@@ -374,3 +382,79 @@ footer {
 .logout-btn:hover {
   background-color: #218838;
 }
+/* End off Logout css*/
+
+
+/* Leaderboard css*/
+.leaderboard-container {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 30px;
+    background-color: var(--light-color);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+ 
+
+.leaderboard-title {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    margin-bottom: 30px;
+}
+ 
+
+.leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    overflow: hidden;
+}
+ 
+
+.leaderboard-table thead {
+    background-color: var(--green-color);
+    color: var(--light-color);
+    text-transform: uppercase;
+}
+ 
+
+.leaderboard-table th,
+.leaderboard-table td {
+    padding: 15px 20px;
+    text-align: center;
+}
+ 
+
+.leaderboard-table tr:nth-child(even) {
+    background-color: var(--grey-color);
+}
+ 
+
+.leaderboard-table tr:hover {
+    background-color: #d0ffd0;
+}
+ 
+
+.leaderboard-table td:first-child {
+    font-weight: bold;
+    color: #1c7c1c;
+}
+ 
+
+.leaderboard-back-link {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 10px 25px;
+    background-color: var(--green-color);
+    color: var(--light-color);
+    text-decoration: none;
+    border-radius: 12px;
+    transition: var(--transition);
+}
+ 
+.leaderboard-back-link:hover {
+    background-color: #47b847;
+}
+/* End of Leaderboard css*/
