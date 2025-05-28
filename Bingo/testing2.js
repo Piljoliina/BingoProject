@@ -167,3 +167,23 @@ function showBingoPopup() {
         popup.classList.remove("show");
     }, 2000);
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+    const loader = document.getElementById("loader");
+    const loaderCount = document.getElementById("loader-count");
+
+    let count = 3;
+
+    const countdown = setInterval(() => {
+        count--;
+        if (count > 0) {
+            loaderCount.textContent = count;
+        } else if (count === 0) {
+            loaderCount.textContent = "BINGO!";
+        } else {
+            clearInterval(countdown);
+            loader.classList.add("fade-out");
+            setTimeout(() => loader.remove(), 1000);
+        }
+    }, 1000);
+});

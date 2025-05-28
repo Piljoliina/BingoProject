@@ -12,6 +12,11 @@ session_start();
     <script src="testing2.js" defer></script>
 </head>
 <body>
+
+<div id="loader" class="loader-overlay">
+    <div id="loader-count">3</div>
+</div>
+
     <a class="wwrapper" href="index.php">
         <img class="nuoli" src="img/nuoli1.png">
     </a>
