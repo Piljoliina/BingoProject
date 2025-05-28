@@ -65,7 +65,7 @@ session_start();
       <div class="wrap">
         <div class="bingo-menu-container">
             <div class="bingo-head">
-                <h1 class="bingo-title">A Pörrsikurssi</h1>
+                <h1 class="bingo-title">Welcome to BullSh*t Bingo!</h1>
             </div>
     
             <div class="menu-body">
@@ -74,7 +74,7 @@ session_start();
     
             <div class="introduction">
                 <h3 class="introduction-text">
-                    Työpaikka bingo is a new interactive way to enjoy those boring oddlong online work meetings
+                    BullSh*t Bingo is a new interactive way to enjoy those boring oddlong online work meetings and school days with friends and coworkers or by yourself without interrupting the workflow.
                 </h3>
 
                 
