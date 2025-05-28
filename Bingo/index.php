@@ -125,7 +125,7 @@ session_start();
 
 <div id="loginModal" class="modal">
   <div class="modal-content">
-    <span class="close" id="closeLogin">&times;</span>
+    <button class="close" id="closeLogin">&times;</button>
 
     <?php if (isset($_SESSION['username'])): ?>
       <h2>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h2>
