@@ -2,6 +2,7 @@
 
 
 document.addEventListener("DOMContentLoaded", () => {
+    const snapSound = document.getElementById("snap-sound");
     const size = 4; // 4x4
     const totalCells = size * size;
     const grid = document.getElementById("bingo-grid");
@@ -97,6 +98,10 @@ document.addEventListener("DOMContentLoaded", () => {
         cell.addEventListener("click", function () {
             if (bingoAchieved) return; // Estä bingon toimiminen
 
+            // Snap ääni
+            snapSound.currentTime = 0;
+            snapSound.play().catch(() => {});
+
             clicked[row][col] = !clicked[row][col];
             this.classList.toggle("clicked");
 
@@ -125,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 .then(data => console.log(data))
                 .catch(error => console.error('Error updating bingo:', error));
 
-                setTimeout(() => alert("BINGO!"), 100);
+                setTimeout(() => showBingoPopup(), 100);
             }
         });
 
@@ -154,3 +159,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+function showBingoPopup() {
+    const popup = document.getElementById("bingo-popup");
+    popup.classList.add("show");
+
+    setTimeout(() => {
+        popup.classList.remove("show");
+    }, 2000);
+}

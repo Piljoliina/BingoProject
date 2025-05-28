@@ -27,7 +27,8 @@ session_start();
     </div>
 </div>
 
-
+<div id="bingo-popup" class="bingo-popup-message">BINGO!</div>
+ <audio id="snap-sound" src="sounds/snap.mp3" preload="auto"></audio>
 
 </body>
 </html>
