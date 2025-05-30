@@ -114,12 +114,12 @@ $accountCreated = isset($_GET['account']) && $_GET['account'] === 'created';
           <button id="closePopup" class="close-button">&times;</button>
           <h2>Create Local Game</h2>
           <select id="gameOptions">
-            <option value="esitykset">Esitykset</option>
-            <option value="kokous">Kokous</option>
-            <option value="koulu">Koulu</option>
-            <option value="diat">Diat</option>
-            <option value="tyokaverit">Työkaverit</option>
-            <option value="politiikka">Politiikka</option>
+            <option value="esitykset">Presentations</option>
+            <option value="kokous">Meetings</option>
+            <option value="koulu">School</option>
+            <option value="diat">Dias</option>
+            <option value="tyokaverit">Coworkers</option>
+            <option value="politiikka">Politics</option>
           </select>
           <br><br>
           <button href="testing2.php" id="startGameBtn" disabled>Start Game</button>
