@@ -1,5 +1,5 @@
 <?php
-session_start(); // 🔐 Starts the session at the beginning
+session_start();
 include 'db_config.php';
 
 $username = $_POST['username'];
@@ -15,11 +15,9 @@ if ($stmt->num_rows > 0) {
     $stmt->fetch();
 
     if (password_verify($password, $hashedPassword)) {
-        // ✅ Store user info in the session
         $_SESSION['user_id'] = $userId;
         $_SESSION['username'] = $username;
 
-        // Redirect to homepage or dashboard
         header("Location: index.php");
         exit();
     } else {

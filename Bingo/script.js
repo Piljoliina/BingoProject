@@ -215,3 +215,19 @@ window.addEventListener('DOMContentLoaded', function () {
         console.warn('Sound play failed:', err);
       });
     });
+
+    window.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('account') === 'created') {
+    const popup = document.getElementById('accountCreatedPopup');
+    popup.style.display = 'block';
+    setTimeout(() => {
+      popup.style.opacity = '1';
+    }, 10); // delay to trigger CSS transition
+
+    setTimeout(() => {
+      popup.style.opacity = '0';
+      setTimeout(() => popup.style.display = 'none', 500);
+    }, 2000); // 2s visible
+  }
+});

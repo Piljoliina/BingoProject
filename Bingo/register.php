@@ -8,7 +8,8 @@ $stmt = $conn->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
 $stmt->bind_param("ss", $username, $password);
 
 if ($stmt->execute()) {
-    echo "Account created!";
+    header("Location: index.php?account=created");
+    exit();
 } else {
     echo "Error: " . $stmt->error;
 }

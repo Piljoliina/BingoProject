@@ -1,5 +1,6 @@
 <?php
 session_start();
+$accountCreated = isset($_GET['account']) && $_GET['account'] === 'created';
 ?>
 
 <!DOCTYPE html>
@@ -158,6 +159,11 @@ session_start();
     <?php endif; ?>
   </div>
 </div>
+
+<div id="accountCreatedPopup" class="success-popup" style="display: none;">
+  <p>Account created!</p>
+</div>
+
       <!-- How to Play Popup -->
       <div id="howToPlayPopup" class="popup" style="display: none;">
         <div class="popup-content">
