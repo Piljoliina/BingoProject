@@ -33,7 +33,7 @@ session_start();
             <a href="#"><img src="img/Illustration14.png" class="logo" alt="Logo"></a>
           </div>
 
-          <!-- Play Button -->
+          <!-- Play Nappi -->
           <div class="header-center">
             <div class="dropdown play-dropdown">
               <div class="play-button dropdown-toggle">
@@ -46,7 +46,7 @@ session_start();
             </div>
           </div>
 
-          <!-- Settings and Profile -->
+          <!-- Asetukset ja profiili -->
           <div class="header-right">
             <i class="fa-solid fa-gear settings-icon"></i>
             <div class="dropdown settings-dropdown">
@@ -62,6 +62,7 @@ session_start();
           </div>
         </div>
         
+        <!-- Main wrap -->
       <div class="wrap">
         <div class="bingo-menu-container">
             <div class="bingo-head">
@@ -77,7 +78,7 @@ session_start();
                     BullSh*t Bingo is a new interactive way to enjoy those boring oddlong online work meetings and school days with friends and coworkers or by yourself without interrupting the workflow.
                 </h3>
 
-                
+                <!-- Käyttäjä luku -->
             <div class="user-count">
               <?php include 'users.php'; ?>
             </div>
@@ -92,6 +93,7 @@ session_start();
         </div>
     </div>
 
+    <!-- Footer -->
       <footer>
         <div class="footer-container">
           <div class="footer-icons-wrapper">
@@ -123,6 +125,8 @@ session_start();
         </div>
       </div>
 
+
+      <!-- Kirjaudu sisään ja ulos modal -->
 <div id="loginModal" class="modal">
   <div class="modal-content">
     <button class="close" id="closeLogin">&times;</button>
@@ -144,6 +148,8 @@ session_start();
       </form>
 
       <br>
+
+      <!-- Rekisteröidy -->
       <form action="register.php" method="post">
         <input type="text" name="username" placeholder="New username"><br><br>
         <input type="password" name="password" placeholder="New password"><br><br>

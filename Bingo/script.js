@@ -10,43 +10,55 @@ const settingsIcon = document.querySelector('.settings-icon');
 const settingsPopup = document.getElementById('settingsPopup');
 const closeSettingsPopup = document.getElementById('closeSettingsPopup');
 
+//volume
 const volumeSlider = document.getElementById('volumeSlider');
 const volumeValue = document.getElementById('volumeValue');
 
-  // Convert and apply volume to all media elements
+// How to Play Popup
+const howToPlayLink = document.getElementById('howToPlayLink');
+const howToPlayPopup = document.getElementById('howToPlayPopup');
+const closeHowToPlayPopup = document.getElementById('closeHowToPlayPopup');
+
+// Statistics Popup
+const statisticsLink = document.getElementById('statisticsLink');
+const statisticsPopup = document.getElementById('statisticsPopup');
+const closeStatisticsPopup = document.getElementById('closeStatisticsPopup');
+
+//sounds
+const playBtn = document.querySelector('.play-button');
+const clickSound = document.getElementById('click-sound');
+
+
+  // Ääni asetukset
   function setGlobalVolume(volumePercent) {
     const volume = volumePercent / 100; // convert 0–100 to 0.0–1.0
     document.querySelectorAll('audio, video').forEach(media => {
       media.volume = volume;
     });
   }
-
-  // Update on input
   volumeSlider.addEventListener('input', () => {
     const value = parseInt(volumeSlider.value, 10);
     volumeValue.textContent = value;
     setGlobalVolume(value);
   });
-
-  // Apply volume on page load
   window.addEventListener('DOMContentLoaded', () => {
     const initialValue = parseInt(volumeSlider.value, 10);
     volumeValue.textContent = initialValue;
     setGlobalVolume(initialValue);
   });
 
-// Show the settings popup
+// Näytä Asetukset popup
 settingsIcon.addEventListener('click', (e) => {
   e.preventDefault();
   settingsPopup.style.display = 'flex';
 });
 
-// Close the settings popup
+// Sulje Asetukset popup "X"
 closeSettingsPopup.addEventListener('click', () => {
   settingsPopup.style.display = 'none';
 });
 
-// Close settings popup if clicking outside the content
+// Klikkaamalla boxin ulkopuolelta. (Asetukset popup)
 settingsPopup.addEventListener('click', (e) => {
   if (e.target === settingsPopup) {
     settingsPopup.style.display = 'none';
@@ -54,65 +66,59 @@ settingsPopup.addEventListener('click', (e) => {
 });
 
 
-// Show the Local Play popup
+// Näytä Local popup
 localPlay.addEventListener('click', (e) => {
   e.preventDefault();
   popup.style.display = 'flex';
 });
 
-// Close the Local Play popup
+// Sulje Local play popup "X"
 closePopup.addEventListener('click', () => {
   popup.style.display = 'none';
 });
 
-// Close the Local Play popup if clicking outside of it
+// Klikkaamalla boxin ulkopuolelta. (Local play popup)
 popup.addEventListener('click', (e) => {
   if (e.target === popup) {
     popup.style.display = 'none';
   }
 });
 
-// Enable/Disable "Start Game" button based on game selection
+// Start game button
 gameOptions.addEventListener('change', () => {
   const selectedOption = gameOptions.value;
   startGameBtn.disabled = selectedOption === "";
   
-  // Save the selected option in localStorage
+  // Valitse teema
   localStorage.setItem("selectedTheme", selectedOption);
 });
 
-// Start the game
+// Aloita peli
 startGameBtn.addEventListener('click', () => {
   const selectedOption = gameOptions.value;
   console.log("Starting game with:", selectedOption);
-  popup.style.display = 'none'; // Hide the popup after starting
-  // Insert your game start logic here
+  popup.style.display = 'none';
 });
 
-// How to Play Popup
-const howToPlayLink = document.getElementById('howToPlayLink');
-const howToPlayPopup = document.getElementById('howToPlayPopup');
-const closeHowToPlayPopup = document.getElementById('closeHowToPlayPopup');
-
-// Show the "How to Play" popup
+// Näytä How to play popup
 howToPlayLink.addEventListener('click', (e) => {
   e.preventDefault();
   howToPlayPopup.style.display = 'flex';
 });
 
-// Close the "How to Play" popup
+// Sulje How to play popup "X"
 closeHowToPlayPopup.addEventListener('click', () => {
   howToPlayPopup.style.display = 'none';
 });
 
-// Close the "How to Play" popup if clicking outside of it
+// Klikkaamalla boxin ulkopuolelta. (How to play popup)
 howToPlayPopup.addEventListener('click', (e) => {
   if (e.target === howToPlayPopup) {
     howToPlayPopup.style.display = 'none';
   }
 });
 
-// Dropdown Menu (already included from previous code)
+// Dropdown menu
 document.addEventListener('DOMContentLoaded', function () {
    const dropdowns = document.querySelectorAll('.dropdown');
    dropdowns.forEach(drop => {
@@ -143,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
   window.location.href = 'testing2.php';
 });
 
-// loader
+// Intro screen loader
 
 
   window.addEventListener("load", () => {
@@ -156,8 +162,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         setTimeout(() => {
           loader.style.display = "none";
-        }, 500); // Wait for the fade-out to finish
-      }, 2000); // Show loader for 2 seconds
+        }, 500); 
+      }, 2000);
     }
   });
 
@@ -168,29 +174,28 @@ document.addEventListener('DOMContentLoaded', function () {
   
   document.getElementById('closeLogin').addEventListener('click', function() {
     document.getElementById('loginModal').style.display = 'none';
-  }); 
+  });
 
-  // Statistics Popup
-const statisticsLink = document.getElementById('statisticsLink');
-const statisticsPopup = document.getElementById('statisticsPopup');
-const closeStatisticsPopup = document.getElementById('closeStatisticsPopup');
-
+  // Näytä Statistics popup
 statisticsLink.addEventListener('click', (e) => {
   e.preventDefault();
   statisticsPopup.style.display = 'flex';
 });
 
+
+ // Sulje Statisctics popup
 closeStatisticsPopup.addEventListener('click', () => {
   statisticsPopup.style.display = 'none';
 });
 
+ // Klikkaamalla boxin ulkopuolelta (Statistics popup)
 statisticsPopup.addEventListener('click', (e) => {
   if (e.target === statisticsPopup) {
     statisticsPopup.style.display = 'none';
   }
 });
 
-//audio on click
+// Musiikin aktivointi painamalla sivua
 window.addEventListener('DOMContentLoaded', function () {
   const audio = document.getElementById('bgAudio');
 
@@ -201,13 +206,8 @@ window.addEventListener('DOMContentLoaded', function () {
     window.removeEventListener('click', playAudio);
   };
 
-  // Start on first click anywhere
   window.addEventListener('click', playAudio);
 });
-
-//sounds
-    const playBtn = document.querySelector('.play-button');
-    const clickSound = document.getElementById('click-sound');
  
     playBtn.addEventListener('click', () => {
       clickSound.currentTime = 0;      // rewind if it’s still playing
