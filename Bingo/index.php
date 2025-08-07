@@ -71,13 +71,17 @@ $accountCreated = isset($_GET['account']) && $_GET['account'] === 'created';
             </div>
     
             <div class="menu-body">
-                <h2 class="box-title">With A Lorem Ipsum </h2>
+                <h2 class="box-title">BY Skibidi Sigma Gaming </h2>
             </div>  
     
             <div class="introduction">
                 <h3 class="introduction-text">
                     BullSh*t Bingo is a new interactive way to enjoy those boring oddlong online work meetings and school days with friends and coworkers or by yourself without interrupting the workflow.
                 </h3>
+
+                <div class="wrapper-img">
+            <img src="img/Illustration14.png" class="logo" alt="Logo" style="width:500px; height:auto;">
+            </div>
 
                 <!-- Käyttäjä luku -->
             <div class="user-count">
@@ -86,13 +90,15 @@ $accountCreated = isset($_GET['account']) && $_GET['account'] === 'created';
 
             <br>
             
-            <div class="wrapper-img">
-            <img src="img/lain.jpg" alt="lain">
-            </div>
-
+            
             </div>
         </div>
+
+        
+
     </div>
+
+    
 
     <!-- Footer -->
       <footer>
