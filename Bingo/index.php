@@ -71,7 +71,7 @@ $accountCreated = isset($_GET['account']) && $_GET['account'] === 'created';
             </div>
     
             <div class="menu-body">
-                <h2 class="box-title">BY Skibidi Sigma Gaming </h2>
+                <h2 class="box-title">BY TFL Gaming </h2>
             </div>  
 
              <!-- Käyttäjä luku -->
